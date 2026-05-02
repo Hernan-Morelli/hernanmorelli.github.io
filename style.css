@@ -83,19 +83,26 @@ h2{
 }
 
 .card-grid{
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 25px;
-    flex-wrap: wrap;
+    align-items: start;
+}
+
+.left,
+.right{
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 }
 
 .card{
-    flex: 1;
-    min-width: 100%;
     background: rgba(255,255,255,0.7);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 28px;
-    margin: 5px;
+    margin: 0;
+    padding: 28px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.06);
 }
 
@@ -110,7 +117,7 @@ p{
 @media (max-width: 768px){
 
     body{
-        font: 12px -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+        font-size: 12px;
     }
 
     .name_box{
@@ -128,7 +135,7 @@ p{
     }
 
     nav{
-        gap: 8px;
+        gap: 6px;
         justify-content: center;
     }
 
@@ -138,34 +145,40 @@ p{
     }
 
     h1{
-        font-size: 42px;
+        font-size: 38px;
         word-break: break-word;
     }
 
     .subtitle{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     h2{
-        font-size: 34px;
+        font-size: 28px;
+        margin-left: 10px;
+        margin-bottom: 12px;
     }
 
     p{
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.6;
     }
 
     .card-grid{
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 18px;
     }
 
     .card{
         min-width: auto;
         width: 100%;
         max-width: 100%;
-        padding: 22px;
+        padding: 18px;
+        margin: 0;
+        border-radius: 22px;
     }
 
     section{
-        margin-top: 55px;
+        margin-top: 45px;
     }
 }
